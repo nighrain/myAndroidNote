@@ -65,6 +65,32 @@ getDay(num,str){
 },
 ```
 
+---
+
+日期格式化
+
+> 前提知识点
+>
+>  [JavaScript RegExp.$1](https://www.cnblogs.com/baby-zhude/p/4126474.html)
+>
+> `RegExp`  是 `javascript` 中的一个内置对象。为正则表达式。
+>
+> `RegExp.$1` 是 `RegExp` 的一个属性,  `指的是与正则表达式匹配的第一个 子匹配(以括号为标志)字符串` ，以此类推， `RegExp.$2` ， `RegExp.$3` ，.. `RegExp.$99` 总共可以有99个匹配
+
+```js
+例子:
+var r= /^(\d{4})-(\d{1,2})-(\d{1,2})$/; //正则表达式 匹配出生日期(简单匹配)
+r.exec('1985-10-15');
+s1=RegExp.$1;
+s2=RegExp.$2;
+s3=RegExp.$3;
+alert(s1+" "+s2+" "+s3)//结果为1985 10 15
+```
+
+
+
+
+
 
 
 
